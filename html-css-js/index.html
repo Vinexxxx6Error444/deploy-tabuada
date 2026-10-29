@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#f2f1e8">
+    <title>Gerador de tabuada</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="page-shell">
+        <header class="masthead">
+            <a class="wordmark" href="#inicio" aria-label="Tabuada, início">
+                <span class="wordmark-mark" aria-hidden="true">×</span>
+                <span>caderno de matemática</span>
+            </a>
+            <span class="edition">ESTUDO 01</span>
+        </header>
+
+        <div class="workspace" id="inicio">
+            <section class="intro" aria-labelledby="page-title">
+                <p class="eyebrow"><span></span> PRÁTICA DE MATEMÁTICA</p>
+                <h1 id="page-title">Gerador de<br><em>tabuada.</em></h1>
+                <div class="intro-rule" aria-hidden="true"></div>
+                <p class="intro-note">01 <span>—</span> Multiplicação</p>
+            </section>
+
+            <section class="calculator" aria-label="Gerador de tabuada">
+                <form id="tabuada-form" class="calculator-form">
+                    <label for="numero-input">Escolha um número</label>
+                    <div class="input-row">
+                        <input
+                            id="numero-input"
+                            name="numero"
+                            type="number"
+                            min="0"
+                            max="999"
+                            step="1"
+                            inputmode="numeric"
+                            placeholder="5"
+                            required
+                        >
+                        <button id="btn-gerar" type="submit">
+                            <span>Gerar tabuada</span>
+                            <span class="button-arrow" aria-hidden="true">→</span>
+                        </button>
+                    </div>
+                    <p class="field-hint">Números inteiros de 0 a 999</p>
+                </form>
+
+                <div id="resultado" class="result" aria-live="polite" aria-atomic="true"></div>
+            </section>
+        </div>
+
+        <footer class="page-footer">
+            <span>MATEMÁTICA DO DIA A DIA</span>
+            <span>01 <span class="footer-dot">•</span> 10</span>
+        </footer>
+    </main>
+
+    <script src="index.js"></script>
+</body>
+</html>
